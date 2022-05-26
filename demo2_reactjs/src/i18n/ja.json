@@ -1,0 +1,15 @@
+{
+	"no_data": "No data found",
+	"sign_in": "ログイン",
+	"not_admin": "Not admin",
+	"contents_management": "コンテンツ管理",
+	"news_management": "ニュース管理",
+	"basic_setting": "設定",
+	"admin_users": "アドミンユーザー管理",
+	"add_new_admin_users": "アドミンユーザーを追加",
+	"enter_input": "必須項目です。",
+	"label_email": "メールアドレス",
+	"label_password": "パスワード",
+	"meta_title": "comony 管理画面",
+	"error": "'エラーが発生しました。再度お試しください。"
+}

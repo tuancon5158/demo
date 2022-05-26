@@ -1,0 +1,50 @@
+.placeholderSpaceList {
+  padding-bottom: 0 !important;
+  background-color: $color_white;
+  border-radius: 6px;
+
+  &_wrapperTemplate {
+    border-radius: 6px;
+    height: 100%;
+
+    .vue-content-placeholders-img {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      width: 100%;
+      padding-top: 65%;
+    }
+    .vue-content-placeholders-text {
+      margin: 12px 1.2rem;
+
+      &__line:first-child {
+        width: 80px;
+      }
+
+      &__line:nth-child(3) {
+        width: 100%;
+      }
+    }
+  }
+
+  &_wrapperDashboard {
+    border-radius: 6px;
+
+    .vue-content-placeholders-img {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      width: 100%;
+      padding-top: 49.3333%;
+    }
+    .vue-content-placeholders-text {
+      margin: 12px 1.2rem;
+
+      &__line:first-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

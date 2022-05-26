@@ -1,0 +1,304 @@
+@keyframes load {
+  0%,
+  100% {
+    background-position: right;
+  }
+  50% {
+    background-position: left;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-flex {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in-flex {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-flex {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: flex;
+    opacity: 0;
+  }
+
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+// mask-elem show-mask
+
+.mask-elem.textMask_center {
+  align-items: center;
+}
+
+.mask-elem div,
+.mask-elem p {
+  width: auto;
+  display: inline;
+  overflow: hidden;
+  position: relative;
+}
+
+.mask-elem div::before,
+.mask-elem p::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: rgba(22, 22, 22, 1);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  //transform: translateX(-100%);
+}
+
+.mask-elem.textMaskBar_white div::before {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.mask-elem.show-mask div::before,
+.mask-elem.show-mask p::before {
+  animation: maskAnime 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+}
+
+.mask-elem div span,
+.mask-elem p span {
+  opacity: 0;
+  transition: all 0ms ease 500ms;
+}
+
+.mask-elem.show-mask div span,
+.mask-elem.show-mask p span {
+  opacity: 1;
+}
+
+@keyframes maskAnime {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  45% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  55% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+.slide-in-item {
+  opacity: 0;
+}
+
+.slide-in-item.is-active {
+  opacity: 0;
+  transform: translateY(65px);
+  animation: slideIn 0.35s ease forwards;
+}
+
+.slide-in-item.is-active--according {
+  opacity: 0;
+  transform: translateX(-65px);
+  animation: slideInLeftToRight 0.35s ease forwards;
+}
+
+@keyframes slideInLeftToRight {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// class="fade"
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// slide left / right animation
+@keyframes mymoveRight {
+  0% {
+    opacity: 0.3;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mymoveLeft {
+  0% {
+    opacity: 0.3;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// slide from bottom to top animation
+@keyframes mymoveTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animatedDirection {
+  &.-right {
+    .heading {
+      transform: translateX(100%);
+    }
+    &--animated {
+      .heading {
+        animation: mymoveRight 1s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+      }
+    }
+  }
+
+  &.-left {
+    .heading {
+      transform: translateX(-100%);
+    }
+
+    &--animated {
+      .heading {
+        animation: mymoveLeft 1s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+      }
+    }
+  }
+
+  &.-bottomToTop {
+    .imageBoxAnimated {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+
+    &--animated {
+      .imageBoxAnimated {
+        animation: mymoveTop 1s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+      }
+    }
+  }
+}

@@ -1,0 +1,328 @@
+/********************************************
+		Variables
+********************************************/
+
+/* -----------------------------------------
+      Image path
+------------------------------------------- */
+$img_path: '@/assets/images/';
+
+/* -----------------------------------------
+      Font
+------------------------------------------- */
+// Base
+$font_base: 'Noto Sans JP', sans-serif;
+$font_size_base: 15;
+$font_size_base_sp: 14;
+$font_color_base: #222;
+
+// Heading font-size
+$font_size_heading1: 54;
+$font_size_heading1_sp: 32;
+$font_size_heading2: 40;
+$font_size_heading3: 34;
+$font_size_heading4: 30;
+$font_size_heading5: 26;
+
+// Visual slider font-size
+$font_size_slider_l: 67;
+$font_size_slider_m: 25;
+
+// Error page font-size
+$font_size_error: 100;
+
+// Hero font-size
+$font_size_hero_xxl: 60;
+$font_size_hero_xl: 52;
+$font_size_hero_l: 46;
+$font_size_hero_m: 36;
+$font_size_hero_s: 33;
+
+// Small text - label font-size
+$font_size_label_l: 17;
+$font_size_label_m: 11;
+$font_size_label_s: 10;
+
+// Font-weight
+$font_weight_black: 900;
+$font_weight_bold: 700;
+$font_weight_semiBold: 600;
+$font_weight_medium: 500;
+$font_weight_normal: 400;
+$font_weight_light: 100;
+
+/* -----------------------------------------
+      Breakpoints
+------------------------------------------- */
+$breakpoints: (
+  // Extra small screen / phone
+  xs: 414px,
+  // Small screen / phone
+  sm: 640px,
+  // Medium screen / tablet
+  md: 768px,
+  lg: 1044px,
+  xl: 1120px,
+  // Large screen / desktop
+  xxl: 1280px,
+  // Extra screen / desktop
+  xxxl: 1368px
+) !default;
+
+$breakpoints_header: 924px;
+$breakpoints_dashboard: 584px;
+
+/* -----------------------------------------
+      Color
+------------------------------------------- */
+// static pages
+$color_primary: #f69a08;
+$color_secondary: #215ed7;
+$color_notice: #db0505;
+$color_notice_lighten1: #ffefef;
+$color_black: #222;
+$color_gray: #aaa;
+$color_gray_darken1: #999;
+$color_gray_darken2: #555;
+$color_gray_lighten1: #ccc;
+$color_gray_lighten2: #e5e5e5;
+$color_gray_lighten3: #f8f8f8;
+$color_darkblue: #0d3584;
+
+// sns color
+$color_facebook: #1877f2;
+$color_twitter: #1d9bf0;
+
+// Gray
+$color_white: #fff;
+$color_gray_50: #faf9fa;
+$color_gray_100: #f5f4f5;
+$color_gray_200: #edecee;
+$color_gray_300: #e0dfe2;
+$color_gray_400: #bdbabf;
+$color_gray_500: #a29da4;
+$color_gray_600: #767378;
+$color_gray_700: #615f63;
+$color_gray_800: #484649;
+$color_gray_900: #212022;
+$color_gray_1000: #100f09;
+
+// LightBlue
+$color_light_blue_100: #f7f7fd;
+$color_light_blue_200: #dfe6f0;
+
+// Yellow
+$color_yellow: #ffc700;
+$color_yellow_50: #fffde8;
+$color_yellow_100: #faf1ba;
+$color_yellow_200: #f5e689;
+$color_yellow_300: #f3dc54;
+$color_yellow_400: #f2d12e;
+$color_yellow_500: #f4c914;
+$color_yellow_600: #f6bc0a;
+$color_yellow_700: #f4a807;
+$color_yellow_800: #f77701;
+$color_yellow_a_100: #f7ed88;
+$color_yellow_a_200: #f5e04a;
+$color_yellow_a_400: #f5cd12;
+$color_yellow_a_700: #f5b40e;
+
+// Blue
+$color_blue_50: #e4ebf8;
+$color_blue_100: #b6bee0;
+$color_blue_200: #8e9bcf;
+$color_blue_300: #687ac0;
+$color_blue_400: #215ed8;
+$color_blue_500: #2648ae;
+$color_blue_600: #1f40a5;
+$color_blue_700: #163798;
+$color_blue_800: #052e8d;
+$color_blue_900: #001b78;
+$color_blue_a_100: #7893f7;
+$color_blue_a_200: #3264f7;
+$color_blue_a_400: #0054fc;
+$color_blue_a_700: #0049fd;
+$color_blue: #006cfa;
+
+// Red
+$color_red_100: #faeff1;
+$color_red_500: #e34561;
+$color_red_a_500: #ff5e7b;
+$color_red_error: #f2453d;
+
+// Green
+$color_green_100: #f1fcf9;
+$color_green_500: #00b07d;
+
+// Explanation Text
+$color_explanationText: #9f9f9f;
+
+$fileDropDown_Overlay_Background: rgba(0, 0, 0, 0.3);
+
+/* -----------------------------------------
+      Width / Height
+------------------------------------------- */
+$header_H_pc: 64px;
+$header_H_sp: 48px;
+$input_H: 4rem;
+$select_W: 260px;
+$select_H: 40px;
+$AddressBar_W: 28rem;
+$checkbox_W: 18px;
+$checkbox_H: 18px;
+
+// Width/Height for dashboard
+$dashboard_sidebar_W_pc: 300px;
+$dashboard_sidebar_W_mb: 100px;
+$dashboard_contents_W: 1044px;
+$dashboard_contents_W_large: 1440px;
+$dashboard_single_contents_W: 964px;
+
+// Width for business
+$default_contents_W: 1044px;
+$default_contents_W_medium: 1216px;
+$default_contents_W_large: 1440px;
+$default_contents_W_xlarge: 1920px;
+
+$business_contents_W: 1920px;
+$interview_contents_W: 1044px;
+$interview_contents_W_large: 1920px;
+$interview_contents_W_medium: 1216px;
+
+// Width for space
+$space_contents_W: 1920px;
+$space_modal_contents_W: 360px;
+
+/* -----------------------------------------
+      Border Radius
+------------------------------------------- */
+$input_BorderRadius: 5px;
+$checkbox_BorderRadius: 3px;
+
+// Border Radius
+$input_BorderRadius: 5px;
+$select_BorderRadius: 6px;
+$tag_BorderRadius_small: 4px;
+$tag_BorderRadius_medium: 5px;
+$tag_BorderRadius_larger: 22px;
+$fileDownload_BorderRadius: 8px;
+$formContainer_BorderRadius: 8px;
+$modalContainer_BorderRadius: 8px;
+$label_BorderRadius_small: 4px;
+$label_BorderRadius_medium: 10px;
+$textArea_BorderRadius: 6px;
+$searchBox_BorderRadius: 6px;
+$fileDropBox_BorderRadius: 3px;
+$licenseCard_BorderRadius: 8px;
+$memberInvitation_BorderRadius: 6px;
+$privacySetting_BorderRadius: 8px;
+$radioButton_BorderRadius: 6px;
+$galleryWithThumbnail_BorderRadius: 183px;
+$galleryWithThumbnail_BorderRadius_sp: 114px;
+$appDownLoadButton_BorderRadius: 6px;
+$userProfile_BorderRadius_medium: 34px;
+$userProfile_BorderRadius_small: 25px;
+$userProfile_BorderRadius_xsmall: 14px;
+
+/* ------------------------------------------
+      spacing for padding / margin
+------------------------------------------- */
+$spacing_1x: 0.4rem;
+$spacing_2x: 0.8rem;
+$spacing_3x: 1.2rem;
+$spacing_4x: 1.6rem;
+$spacing_5x: 2rem;
+$spacing_6x: 2.4rem;
+$spacing_7x: 2.8rem;
+$spacing_8x: 3.2rem;
+$spacing_9x: 3.6rem;
+$spacing_10x: 4rem;
+$spacing_11x: 4.4rem;
+$spacing_12x: 4.8rem;
+$spacing_13x: 5.2rem;
+$spacing_14x: 5.6rem;
+$spacing_15x: 6rem;
+$spacing_16x: 6.4rem;
+$spacing_17x: 7rem;
+$spacing_18x: 7.2rem;
+$spacing_19x: 7.6rem;
+$spacing_20x: 8rem;
+$spacing_21x: 8.4rem;
+$spacing_22x: 8.8rem;
+$spacing_24x: 9.6rem;
+$spacing_25x: 10rem;
+$spacing_28x: 11.2rem;
+$spacing_30x: 12rem;
+$spacing_31x: 12.4rem;
+$spacing_35x: 14rem;
+$spacing_36x: 14.4rem;
+$spacing_37x: 15rem;
+$spacing_40x: 16rem;
+$spacing_41x: 16.4rem;
+$spacing_42x: 16.8rem;
+$spacing_43x: 17.2rem;
+$spacing_44x: 17.6rem;
+$spacing_50x: 20rem;
+$spacing_60x: 24.2rem;
+$spacing_82x: 33rem;
+
+/* -----------------------------------------
+     SERVICE PAGE
+------------------------------------------- */
+// color
+$color_yellow_gradient: linear-gradient(103.27deg, #ffc700 18.62%, #ffe600 82.01%), #000;
+$color_black_gradient: linear-gradient(90deg, #100f09 0%, #2b2e33 100%);
+$color_black_gradien_opacity: linear-gradient(
+  90deg,
+  rgba(#100f09, 0.9) 0%,
+  rgba(#2b2e33, 0.9) 100%
+);
+$color_black_gradient_2: linear-gradient(90deg, #090b10 0%, #2b2e33 100%);
+$color_black_gradient_3: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+$color_white_gradient: linear-gradient(108.46deg, #fff 1.35%, #faf9f3 85.13%);
+$color_blue_gradient: linear-gradient(179.48deg, #b3cede 3.48%, #d7cdbf 92.91%);
+$color_white_gradient_2: linear-gradient(181.9deg, rgba(255, 255, 255, 0) -3.93%, #fff 85.61%);
+$color_yellow_new: #fdcf10;
+$color_border: #a6a6a6;
+
+// font-size
+$font_size_xxxlarge: 157;
+$font_size_xxlarge: 62;
+$font_size_xlarge: 46;
+$font_size_large: 24;
+$font_size_medium: 18;
+$font_size_standard: 16; // font size base using in all pages
+$font_size_small: 14;
+$font_size_xsmall: 12;
+
+// Standard font-size
+$font_size_xxxxl: 48;
+$font_size_xxxl: 28;
+$font_size_xxl: 24;
+$font_size_xl: 22;
+$font_size_l: 20;
+$font_size_m: 18;
+$font_size_s: 16;
+$font_size_xs: 14;
+$font_size_xxs: 13;
+$font_size_xxxs: 12;
+
+// font-size for mobile
+$font_size_xxsmall: 10;
+$font_size_xxxlarge_mb: 100;
+$font_size_xxlarge_mb: 34;
+$font_size_xlarge_mb: 28;
+
+// opacity
+$opacity_hoverLink: 0.75;
+$opacity_hoverLink_2: 0.85;
+
+// font-size
+$font_size_hero: 55;
+$font_size_hero_mb: 30;
+
+// opacity
+$opacity_hover: 0.75;
+
+// line height
+$line_height_article: 1.875;

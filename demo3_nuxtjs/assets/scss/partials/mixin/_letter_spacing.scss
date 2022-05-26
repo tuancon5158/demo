@@ -1,0 +1,7 @@
+/********************************************
+		Letter-spacing Mixin
+********************************************/
+
+@mixin ls($tracking) {
+  letter-spacing: $tracking / 1000 + em;
+}

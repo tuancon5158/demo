@@ -1,0 +1,60 @@
+/********************************************
+		Utilities
+********************************************/
+
+// responsive
+.is-pc {
+  @include pc() {
+    display: block !important;
+  }
+
+  @include mb() {
+    display: none !important;
+  }
+}
+
+.is-sp {
+  @include pc() {
+    display: none !important;
+  }
+
+  @include mb() {
+    display: block !important;
+  }
+}
+
+.is-ipad {
+  @include max-screen(map-get($breakpoints, sm) - 1) {
+    display: none !important;
+  }
+  @include min-screen(map-get($breakpoints, sm)) {
+    display: block !important;
+  }
+}
+
+.is-mobile {
+  @include max-screen(map-get($breakpoints, sm) - 1) {
+    display: block !important;
+  }
+  @include min-screen(map-get($breakpoints, sm)) {
+    display: none !important;
+  }
+}
+
+.is-header-pc {
+  @include header-pc() {
+    display: block !important;
+  }
+  @include header-mb() {
+    display: none !important;
+  }
+}
+
+.is-header-mb {
+  @include header-pc() {
+    display: none !important;
+  }
+  @include header-mb() {
+    display: block !important;
+  }
+}

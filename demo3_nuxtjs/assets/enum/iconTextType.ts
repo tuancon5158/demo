@@ -1,0 +1,1 @@
+type iconTextType = 'horizontal' | 'vertical'

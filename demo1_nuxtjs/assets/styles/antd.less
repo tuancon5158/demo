@@ -1,0 +1,65 @@
+@import '~ant-design-vue/dist/antd.less';
+@import './antd-variables.less';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+// override
+.ant-drawer-body {
+  height: 100%;
+
+  .drawer-body__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .drawer-body__content {
+    flex: 1 1 0;
+    overflow: scroll;
+    position: relative;
+  }
+}
+
+// modal
+.ant-modal-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 90vh;
+
+  .ant-modal-body {
+    overflow: auto;
+  }
+}
+
+// button icon
+.ant-btn > .anticon {
+  line-height: 0;
+}
+
+.anticon {
+  vertical-align: 0.125em;
+}
+.ant-table table {
+  font-size: 14px;
+}
+.ant-timeline-item-head-blue {
+  background-color: @ant-timeline-line;
+  border: none;
+}
+.ant-timeline-item-tail {
+  border-left: 1px solid @ant-timeline-line;
+}
+
+@table-selection-column-width: 10px;

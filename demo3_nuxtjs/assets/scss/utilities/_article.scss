@@ -1,0 +1,91 @@
+/********************************************
+		Article css
+********************************************/
+.article {
+  &_heading {
+    &--lv2 {
+      @include pc() {
+        @include fz($font_size_xxxl);
+      }
+
+      @include mb() {
+        @include fz($font_size_l);
+      }
+    }
+  }
+
+  &_list {
+    &--number > li,
+    &--number > dt {
+      counter-increment: cnt;
+      text-indent: -2rem;
+      margin-left: 2rem;
+
+      &::before {
+        content: counter(cnt) '. ';
+      }
+    }
+
+    &--dots {
+      padding-left: $spacing_4x;
+
+      & > li {
+        list-style: disc;
+        padding-left: 0;
+
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    &--number > li > ul > li {
+      text-indent: 0;
+      margin-left: 0;
+    }
+  }
+
+  &_box {
+    background-color: $color_white;
+    border-radius: 10px;
+    position: relative;
+    z-index: $z_articleContents;
+
+    @include pc() {
+      top: -140px;
+      padding: $spacing_20x $spacing_15x;
+    }
+
+    @include mb() {
+      padding: $spacing_10x $spacing_5x;
+    }
+  }
+
+  &_text {
+    &--center {
+      text-align: center;
+      margin-bottom: $spacing_8x;
+    }
+
+    &--right {
+      text-align: right;
+      margin-top: $spacing_8x;
+    }
+  }
+}
+
+// リスト共通
+[class^='article_list'] li > ul > li {
+  position: relative;
+  padding-left: $spacing_4x;
+
+  &:not(:first-child) {
+    margin-top: $spacing_1x;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: '・';
+  }
+}

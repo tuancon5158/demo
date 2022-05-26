@@ -1,0 +1,76 @@
+/********************************************
+		Media-query Mixin
+********************************************/
+
+// var の map-get($breakpoints, md) の値+1px以上
+@mixin pc() {
+  @media screen and (min-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin h-pc() {
+  @media (min-height: 1024px) {
+    @content;
+  }
+}
+
+// var の map-get($breakpoints, md) の値以下
+@mixin mb() {
+  @media screen and (max-width: map-get($breakpoints, md) - 1) {
+    @content;
+  }
+}
+
+// $break_point_max以上
+@mixin min-screen($break_point_max) {
+  @media screen and (min-width: $break_point_max) {
+    @content;
+  }
+}
+
+// $break_point_min以下
+@mixin max-screen($break_point_min) {
+  @media screen and (max-width: $break_point_min) {
+    @content;
+  }
+}
+
+// $break_point_min 以上 $break_point_max)以下
+@mixin screen($break_point_min, $break_point_max) {
+  @media screen and (min-width: $break_point_min) and (max-width: $break_point_max) {
+    @content;
+  }
+}
+
+@mixin ipad() {
+  @media screen and (min-width: map-get($breakpoints, xs)) and (max-width: map-get($breakpoints, md) - 1) {
+    @content;
+  }
+}
+
+// header break_point
+@mixin header-pc() {
+  @media screen and (min-width: $breakpoints_header + 1) {
+    @content;
+  }
+}
+
+@mixin header-mb() {
+  @media screen and (max-width: $breakpoints_header) {
+    @content;
+  }
+}
+
+// dashboard break_point
+@mixin dashboard-pc() {
+  @media screen and (min-width: $breakpoints_dashboard + 1) {
+    @content;
+  }
+}
+
+@mixin dashboard-mb() {
+  @media screen and (max-width: $breakpoints_dashboard) {
+    @content;
+  }
+}

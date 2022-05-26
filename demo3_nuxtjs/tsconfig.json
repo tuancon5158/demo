@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "types": ["@nuxt/types", "@types/node", "@nuxtjs/axios", "@nuxtjs/auth", "@nuxtjs/i18n"]
+  },
+  "files": ["types/vue-shims.d.ts", "types/vue-i18n.d.ts"],
+  "include": ["**/*.ts", "**/*.vue", "plugins/auth-lang-redirect.js", "./types", "./types/*"],
+  "exclude": ["node_modules", ".nuxt", "dist"]
+}

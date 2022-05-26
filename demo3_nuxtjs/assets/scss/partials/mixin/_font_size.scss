@@ -1,0 +1,12 @@
+/********************************************
+		Font-size Mixin (Export px/rem)
+********************************************/
+
+@mixin fz($size, $important: false) {
+  font-size: $size + px;
+  font-size: ($size / 10) * 1rem;
+
+  @if $important {
+    font-size: $size + px !important;
+  }
+}

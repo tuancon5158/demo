@@ -1,0 +1,13 @@
+export enum E_DASHBOARD_STATUS {
+  DANG_LAM_VIEC = 1,
+  TAM_DUNG_CONG_VIEC,
+  DA_NGHI_VIEC,
+  TAP_SU,
+  THU_VIEC,
+  CHINH_THUC,
+  FREELANCER,
+}
+export enum E_DASHBOARD_STATUS_THIS_MONTH {
+  CHINH_THUC = 'join',
+  DA_NGHI_VIEC = 'left',
+}

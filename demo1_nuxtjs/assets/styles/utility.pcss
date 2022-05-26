@@ -1,0 +1,67 @@
+body {
+  --t-offset-bottom: 0px;
+  --t-offset-top: 0px;
+  --t-tabbar-height: 52px;
+  --t-toolbar-height: 52px;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease;
+}
+.slide-enter,
+.slide-leave-to {
+  transform: translate3d(400px, 0, 0);
+}
+
+
+.t-page {
+  bottom: 0;
+  contain: layout size style;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  visibility: inherit;
+  z-index: 0;
+}
+
+.t-header {
+  display: block;
+  order: -1;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.t-content {
+  contain: size style;
+  display: block;
+  flex: 1 1 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.t-main {
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-top: var(--t-offset-top);
+  position: absolute;
+  right: 0;
+  top: 0;
+  visibility: inherit;
+}
+
+.t-toolbar-offset {
+  padding-top: var(--t-toolbar-offset)
+}
